@@ -16,9 +16,10 @@ genai.configure(api_key=GEMINI_API_KEY)
 embedding_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 # ✅ Define Paths
-FAISS_INDEX_PATH = r"E:\PythonProject\BiologyBOT\faiss_index\biology_textbook.faiss"
-CHUNKS_PATH = r"E:\PythonProject\BiologyBOT\faiss_index\biology_textbook_chunks.pkl"
-METADATA_PATH = r"E:\PythonProject\BiologyBOT\faiss_index\biology_textbook_metadata.pkl"
+FAISS_INDEX_PATH = "faiss_index/biology_textbook.faiss"
+CHUNKS_PATH = "faiss_index/biology_textbook_chunks.pkl"
+METADATA_PATH = "faiss_index/biology_textbook_metadata.pkl"
+
 
 # ✅ Load FAISS Index
 index = faiss.read_index(FAISS_INDEX_PATH)
