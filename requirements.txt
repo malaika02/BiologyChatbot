@@ -5,4 +5,3 @@ numpy
 requests
 google-generativeai
 streamlit-extras
-pickle5
