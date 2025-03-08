@@ -1,0 +1,8 @@
+streamlit
+faiss-cpu
+sentence-transformers
+numpy
+requests
+google-generativeai
+streamlit-extras
+pickle5
