@@ -16,20 +16,19 @@ genai.configure(api_key=GEMINI_API_KEY)
 embedding_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 # ✅ Define Paths
-FAISS_INDEX_PATH = "faiss_index/biology_textbook.faiss"
-CHUNKS_PATH = "faiss_index/biology_textbook_chunks.pkl"
-METADATA_PATH = "faiss_index/biology_textbook_metadata.pkl"
+FAISS_INDEX_PATH = "biology_textbook.faiss"
+CHUNKS_PATH = "biology_textbook_chunks.pkl"
+METADATA_PATH = "biology_textbook_metadata.pkl"
 
-
-# ✅ Load FAISS Index
 index = faiss.read_index(FAISS_INDEX_PATH)
 
-# ✅ Load Text Chunks & Metadata
 with open(CHUNKS_PATH, "rb") as f:
     text_chunks = pickle.load(f)
 
 with open(METADATA_PATH, "rb") as f:
     metadata = pickle.load(f)
+
+print("✅ FAISS Index Loaded Successfully!")
 
 
 # ✅ Function to Classify Question Type (Factual vs. Conceptual)
